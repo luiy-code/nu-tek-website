@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nu-Tek IT Solutions for Small Business</title>
+  <meta name="description" content="Contact Nu-Tek in Miramar, FL. Tell us what's slowing your business down — consultations start at just $100. Call +1 (954) 326-1736.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">N</span>
+        <span class="logo-text">Nu<span class="accent">-</span>Tek</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="consultations.html">Consultations</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary btn-nav">Book a Consultation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero page-hero-photo">
+      <div class="hero-glow"></div>
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Tell us what's <span class="gradient-text">slowing you down</span></h1>
+        <p class="hero-sub">
+          Describe the problem in plain English — we'll tell you how to fix it, affordably.
+          Every consultation starts at just $100.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="form">
+      <div class="container contact-grid">
+        <div>
+          <h2>Talk to us</h2>
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> <a href="tel:+19543261736">+1 (954) 326-1736</a></li>
+            <li><strong>Location:</strong> Miramar, FL</li>
+            <li><strong>Hours:</strong> Mon–Fri, 9am–6pm ET</li>
+          </ul>
+          <figure class="contact-photo">
+            <img src="images/contact.svg" alt="Illustration of an envelope, phone, and location pin">
+          </figure>
+        </div>
+        <form class="contact-form" onsubmit="return handleContact(event)">
+          <label>Name
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>Email
+            <input type="email" name="email" required placeholder="you@business.com">
+          </label>
+          <label>What do you need help with?
+            <select name="service" required>
+              <option value="">Select a service…</option>
+              <option>PowerBI Dashboard Development</option>
+              <option>Operational Flows Automations</option>
+              <option>AI Agents</option>
+              <option>IT Staff Augmentation</option>
+              <option>Website &amp; SEO Development</option>
+              <option>Practical Technical Training</option>
+              <option>Not sure — help me figure it out</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" rows="4" placeholder="Briefly describe your situation…"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="logo">
+          <span class="logo-mark">N</span>
+          <span class="logo-text">Nu<span class="accent">-</span>Tek</span>
+        </a>
+        <p class="footer-tag">Affordable technical solutions for small &amp; mid-sized businesses. Consultations start at $100.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Consultations</h4>
+          <ul>
+            <li><a href="consultations.html#powerbi">PowerBI Dashboards</a></li>
+            <li><a href="consultations.html#automation">Automations</a></li>
+            <li><a href="consultations.html#ai-agents">AI Agents</a></li>
+            <li><a href="consultations.html#staffing">IT Staff Augmentation</a></li>
+            <li><a href="consultations.html#web-seo">Website &amp; SEO</a></li>
+            <li><a href="consultations.html#training">Technical Training</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Nu-Tek</a></li>
+            <li><a href="about.html#process">How It Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+19543261736">+1 (954) 326-1736</a></li>
+            <li>Miramar, FL</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Nu-Tek. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

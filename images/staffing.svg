@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="#0e1630"/>
+
+  <!-- teammate left -->
+  <circle cx="170" cy="170" r="34" fill="#2a3763"/>
+  <path d="M110 292 q0 -62 60 -62 q60 0 60 62z" fill="#2a3763"/>
+
+  <!-- teammate right -->
+  <circle cx="430" cy="170" r="34" fill="#2a3763"/>
+  <path d="M370 292 q0 -62 60 -62 q60 0 60 62z" fill="#2a3763"/>
+
+  <!-- new IT specialist (center, highlighted) -->
+  <circle cx="300" cy="150" r="44" fill="url(#g)"/>
+  <path d="M224 302 q0 -78 76 -78 q76 0 76 78z" fill="url(#g)"/>
+  <!-- headset -->
+  <path d="M262 146 a38 38 0 0 1 76 0" fill="none" stroke="#eef2ff" stroke-width="7" stroke-linecap="round"/>
+  <rect x="255" y="142" width="13" height="24" rx="6.5" fill="#eef2ff"/>
+  <rect x="332" y="142" width="13" height="24" rx="6.5" fill="#eef2ff"/>
+  <path d="M338 166 q0 18 -20 20" fill="none" stroke="#eef2ff" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="315" cy="187" r="6" fill="#eef2ff"/>
+
+  <!-- plus badge: added to the team -->
+  <circle cx="352" cy="118" r="22" fill="#4ade80" stroke="#0e1630" stroke-width="5"/>
+  <line x1="352" y1="108" x2="352" y2="128" stroke="#0e1630" stroke-width="6" stroke-linecap="round"/>
+  <line x1="342" y1="118" x2="362" y2="118" stroke="#0e1630" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- baseline -->
+  <line x1="96" y1="316" x2="504" y2="316" stroke="#2a3763" stroke-width="4" stroke-linecap="round"/>
+</svg>
