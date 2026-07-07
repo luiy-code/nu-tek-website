@@ -1,19 +1,20 @@
 /* ==========  Nu-Tek — Affordable IT Solutions for SMBs  ========== */
 
 :root {
-  --bg: #0b1020;
-  --bg-alt: #101830;
-  --surface: #151f3d;
-  --surface-2: #1b2750;
-  --border: rgba(255, 255, 255, 0.09);
-  --text: #eef2ff;
-  --text-dim: #a7b1cc;
-  --accent: #38bdf8;
-  --accent-2: #818cf8;
+  --bg: #04070f;
+  --bg-alt: #070c1a;
+  --surface: #0a1224;
+  --surface-2: #0e1834;
+  --border: rgba(57, 196, 255, 0.16);
+  --text: #eaf6ff;
+  --text-dim: #9fb3cc;
+  --accent: #39c4ff;
+  --accent-2: #6d8dff;
   --accent-strong: #0ea5e9;
   --green: #4ade80;
   --radius: 14px;
-  --shadow: 0 18px 50px rgba(2, 6, 23, 0.55);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+  --neon: 0 0 18px rgba(57, 196, 255, 0.4);
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
   --font-head: "Space Grotesk", var(--font-body);
 }
@@ -55,6 +56,7 @@ img { max-width: 100%; display: block; }
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  filter: drop-shadow(0 0 16px rgba(57, 196, 255, 0.45));
 }
 
 /* ----------  Buttons  ---------- */
@@ -73,14 +75,22 @@ img { max-width: 100%; display: block; }
 .btn-primary {
   background: linear-gradient(92deg, var(--accent-strong), var(--accent-2));
   color: #fff;
-  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.28);
+  box-shadow: var(--neon);
 }
+.btn-primary:hover { box-shadow: 0 0 28px rgba(57, 196, 255, 0.6); }
 .btn-ghost {
   border-color: var(--border);
   color: var(--text);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(57, 196, 255, 0.05);
 }
-.btn-light { background: #fff; color: #0b1020; }
+.btn-light {
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  box-shadow: var(--neon), inset 0 0 12px rgba(57, 196, 255, 0.12);
+  text-shadow: 0 0 10px rgba(57, 196, 255, 0.6);
+}
+.btn-light:hover { background: rgba(57, 196, 255, 0.1); }
 .btn-lg { padding: 0.95rem 2.1rem; font-size: 1.02rem; }
 .btn-nav { padding: 0.5rem 1.2rem; font-size: 0.88rem; }
 
@@ -89,7 +99,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(11, 16, 32, 0.85);
+  background: rgba(4, 7, 15, 0.88);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
@@ -100,19 +110,14 @@ img { max-width: 100%; display: block; }
   padding: 0.85rem 0;
 }
 .logo { display: inline-flex; align-items: center; gap: 0.55rem; }
-.logo-mark {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent-strong), var(--accent-2));
-  color: #fff;
+.logo-img { height: 44px; width: auto; }
+.logo-text {
   font-family: var(--font-head);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  color: var(--text);
+  text-shadow: 0 0 14px rgba(57, 196, 255, 0.5);
 }
-.logo-text { font-family: var(--font-head); font-weight: 700; font-size: 1.3rem; color: var(--text); }
 .logo-text .accent { color: var(--accent); }
 
 .nav-links {
@@ -148,8 +153,8 @@ img { max-width: 100%; display: block; }
   inset: -40% -20% auto;
   height: 130%;
   background:
-    radial-gradient(600px 420px at 22% 30%, rgba(56, 189, 248, 0.16), transparent 65%),
-    radial-gradient(560px 400px at 80% 20%, rgba(129, 140, 248, 0.16), transparent 65%);
+    radial-gradient(600px 420px at 22% 30%, rgba(57, 196, 255, 0.2), transparent 65%),
+    radial-gradient(560px 400px at 80% 20%, rgba(109, 141, 255, 0.16), transparent 65%);
   pointer-events: none;
 }
 .hero-inner {
@@ -201,7 +206,9 @@ img { max-width: 100%; display: block; }
 
 /* ----------  Pricing banner  ---------- */
 .price-banner {
-  background: linear-gradient(96deg, var(--accent-strong), var(--accent-2));
+  background: var(--bg-alt);
+  border-block: 1px solid rgba(57, 196, 255, 0.35);
+  box-shadow: inset 0 0 60px rgba(57, 196, 255, 0.07);
 }
 .price-banner-inner {
   display: flex;
@@ -210,17 +217,13 @@ img { max-width: 100%; display: block; }
   padding: 2.6rem 0;
   flex-wrap: wrap;
 }
-.price-banner-amount {
-  font-family: var(--font-head);
-  font-size: clamp(3rem, 6vw, 4.2rem);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-  white-space: nowrap;
+.price-banner h2 {
+  color: var(--accent);
+  font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+  text-shadow: 0 0 18px rgba(57, 196, 255, 0.55);
 }
-.price-banner h2 { color: #fff; font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
 .price-banner p {
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--text-dim);
   margin-top: 0.5rem;
   max-width: 46rem;
   font-size: 0.97rem;
@@ -249,7 +252,11 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   transition: transform 0.18s ease, border-color 0.18s ease;
 }
-.card:hover { transform: translateY(-4px); border-color: rgba(56, 189, 248, 0.45); }
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(57, 196, 255, 0.55);
+  box-shadow: var(--neon);
+}
 .card-img {
   width: 100%;
   height: 180px;
@@ -329,7 +336,9 @@ img { max-width: 100%; display: block; }
 
 /* CTA banner */
 .cta-banner {
-  background: linear-gradient(96deg, var(--accent-strong), var(--accent-2));
+  background: var(--bg-alt);
+  border-block: 1px solid rgba(57, 196, 255, 0.35);
+  box-shadow: inset 0 0 60px rgba(57, 196, 255, 0.07);
   padding: 3.4rem 0;
 }
 .cta-inner {
@@ -339,8 +348,8 @@ img { max-width: 100%; display: block; }
   gap: 2rem;
   flex-wrap: wrap;
 }
-.cta-banner h2 { color: #fff; }
-.cta-banner p { color: rgba(255, 255, 255, 0.85); margin-top: 0.4rem; }
+.cta-banner h2 { color: var(--text); text-shadow: 0 0 18px rgba(57, 196, 255, 0.35); }
+.cta-banner p { color: var(--text-dim); margin-top: 0.4rem; }
 
 /* Contact */
 .contact-grid {
@@ -406,7 +415,7 @@ img { max-width: 100%; display: block; }
   scroll-margin-top: 90px;
   transition: border-color 0.18s ease;
 }
-.consult:hover { border-color: rgba(56, 189, 248, 0.45); }
+.consult:hover { border-color: rgba(57, 196, 255, 0.55); box-shadow: var(--neon); }
 .consult:nth-child(even) { grid-template-columns: 1fr 340px; }
 .consult:nth-child(even) .consult-img { order: 2; }
 .consult-img {

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 130">
+  <defs>
+    <filter id="neon" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- NT monogram drawn as one neon tube: the N's right stroke is the T's stem -->
+  <g filter="url(#neon)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 104 V30 L88 104 V30 M68 30 H122" stroke="#0b7fc4" stroke-width="15" opacity="0.9"/>
+    <path d="M32 104 V30 L88 104 V30 M68 30 H122" stroke="#39c4ff" stroke-width="8.5"/>
+    <path d="M32 104 V30 L88 104 V30 M68 30 H122" stroke="#e3f8ff" stroke-width="2.5"/>
+  </g>
+</svg>
