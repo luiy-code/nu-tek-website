@@ -58,7 +58,12 @@
             <img src="images/contact.svg" alt="Illustration of an envelope, phone, and location pin">
           </figure>
         </div>
-        <form class="contact-form" onsubmit="return handleContact(event)">
+        <form class="contact-form" action="https://formsubmit.co/aldanaluis295@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New consultation request — Nu-Tek website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://luiy-code.github.io/nu-tek-website/contact.html?sent=1">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <label>Name
             <input type="text" name="name" required placeholder="Your name">
           </label>

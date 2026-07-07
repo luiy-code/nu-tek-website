@@ -24,12 +24,12 @@ if (serviceSelect && savedService) {
   sessionStorage.removeItem("nutek-service");
 }
 
-// Contact form — placeholder handler until a backend/booking system is connected
-function handleContact(event) {
-  event.preventDefault();
+// Show confirmation after FormSubmit redirects back with ?sent=1
+if (window.location.search.includes("sent=1")) {
   const note = document.getElementById("form-note");
-  note.textContent =
-    "Thanks! We'll get back to you within one business day. For faster help, call +1 (954) 326-1736.";
-  event.target.reset();
-  return false;
+  if (note) {
+    note.textContent =
+      "Thanks! Your request was sent. We'll get back to you within one business day — for faster help, call +1 (954) 326-1736.";
+    document.querySelector(".contact-form").scrollIntoView({ block: "center" });
+  }
 }
